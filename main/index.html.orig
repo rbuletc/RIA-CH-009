@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Materials & Units Manager</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+    
+	<div id="content">
+    
+    </div>
+    
+        <script type="text/template" id="navigation">
+            <button id="showMaterial">Show Materials</button>
+            <button id="showUnit">Show Unit</button>
+        </script>  
+        
+        <script type="text/template"  id="temlateUnits">
+			<h1>Warehouse</h1><br>
+			
+			<div id="addUnit">
+				<div class="fl">New unit:</div>
+				<div class="fle"><input class="textbox" id="unit" type="text"></div>
+			</div>
+			<div style="height:15px;"></div>
+			<br>
+			
+			<div id="units_holder"></div>
+        </script> 
+   
+        <script type="text/template"  id="temlateMaterials">
+			<h1>Warehouse</h1><br>
+			
+            <div id="addMaterial">
+				<div class="fl">Material:</div>
+				<div class="fle"><input class="textbox" id="material" type="text"></div>
+				<div class="clear"></div>
+				<div class="fl">Price:</div> 
+				<div class="fle"><input class="textbox" id="price" type="text"></div> 
+            </div>
+            
+            <div id="table_holder"></div>
+        </script> 
+   
+		<script type="text/template" id="unit-name">
+			<div class="unit_wrapper">
+				<div class="unit_holder">
+					<div class="unit_name"><%= name %></div>
+					<div class="add_unitItem"></div>
+					<div class="clear"></div>
+					<div class="unit_info"></div>
+				</div>
+				<div class="materials_holder"></div>
+			</div>
+			<div class="clear"></div>	
+			<div style="height:15px;"></div>
+		</script>
+		
+		<script type="text/template" id="unit-count">
+			  <div class="holder">
+				<div class="material_in_unit"><%= material %></div>
+				<div class="count"><%= count %></div>
+				<div class="delete" title="Delete <%= material %> material"></div>
+			  </div> 
+		</script>
+		
+		<script type="text/template" id="material-price-plus">
+			  <div class="holder">
+				<div class="plus" title="Add <%= material %> to the unit"></div>
+				<div class="material"><%= material %></div>
+				<div class="price"><%= price %></div>
+			  </div>
+			  <div class="clear"></div>
+		</script>
+	 
+		<script type="text/template" id="material-price">
+			  <div class="holder">
+				<div class="material"><%= material %></div>
+				<div class="price"><%= price %></div>
+				<div class="delete" title="Delete <%= material %> material"></div>
+			  </div> 
+		</script>
+	
+		<script src="js/jquery.js"></script>
+		<script src="js/underscore.js"></script>
+		<script src="js/backbone.js"></script>
+		<script src="js/defaults.js"></script>
+		<script src="js/dbConnector.js"></script>
+		<script src="js/models.js"></script>
+		<script src="js/collections.js"></script>
+		<script src="js/views.js"></script>
+		<script src="js/app.js"></script>
+		
+
+
+	</body>
+</html>
